@@ -2,5 +2,5 @@
 Extra rxjs pipe operators
 
 ```
-npm i rxjs-red-operators
+npm i rxjs-x-operators
 ```
