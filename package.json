@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dbojarski/rxjs-red-operators"
+    "url": "https://github.com/PGS-dev/rxjs-x-operators"
   },
   "scripts": {
     "prepublish": "tsc -d",
