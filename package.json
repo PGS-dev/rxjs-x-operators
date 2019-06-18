@@ -1,0 +1,29 @@
+{
+  "author": "Daniel Bojarski (ELZOY)",
+  "description": "Extra rxjs operators",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.12",
+    "jasmine": "^3.4.0",
+    "typescript": "^3.4.5"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "main": "dist/index.js",
+  "name": "rxjs-x-operators",
+  "license": "ISC",
+  "peerDependencies": {
+    "rxjs": "^6.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbojarski/rxjs-red-operators"
+  },
+  "scripts": {
+    "prepublish": "tsc -d",
+    "test": "tsc && node node_modules/jasmine/bin/jasmine.js"
+  },
+  "typings": "./dist/index.d.ts",
+  "version": "1.0.0"
+}

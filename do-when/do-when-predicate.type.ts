@@ -1,0 +1,1 @@
+export type DoWhenPredicate = 'truthy' | 'falsy' | ((value: any) => boolean);
