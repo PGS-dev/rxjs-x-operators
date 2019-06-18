@@ -1,4 +1,4 @@
-# rxjs-red-operators
+# rxjs-x-operators
 Extra rxjs pipe operators
 
 ```
