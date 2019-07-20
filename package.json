@@ -21,8 +21,8 @@
     "url": "https://github.com/PGS-dev/rxjs-x-operators"
   },
   "scripts": {
-    "prepublish": "tsc -d",
-    "test": "tsc && node node_modules/jasmine/bin/jasmine.js"
+    "prepublishOnly": "npx tsc -d",
+    "test": "npx tsc --project tsconfig.spec.json && npx jasmine"
   },
   "typings": "./dist/index.d.ts",
   "version": "1.2.0"
