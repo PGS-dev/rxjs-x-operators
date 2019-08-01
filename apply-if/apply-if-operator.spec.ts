@@ -1,5 +1,5 @@
 import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, mapTo } from 'rxjs/operators';
 
 import { applyIf } from './apply-if.operator';
 
@@ -8,8 +8,8 @@ function getObs$(value: boolean): Observable<string> {
         .pipe(
             applyIf(
                 value,
-                map(() => 'truthy'),
-                map(() => 'falsy')
+                mapTo('truthy'),
+                mapTo('falsy')
             )
         )
 }
