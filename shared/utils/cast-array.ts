@@ -1,3 +1,3 @@
-export function castArray(input) {
-    return Array.isArray(input) ? input : [input]
+export function castArray<T>(input: T | T[]): T[] {
+    return Array.isArray(input) ? input : [input];
 }
