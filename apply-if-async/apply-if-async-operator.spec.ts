@@ -26,18 +26,4 @@ describe('apply-if-async operator', () => {
         expect(value).toEqual('falsy');
       });
   });
-
-  // it('should apply given elseOperators if given observable returned false.', () => {
-  //   of('input')
-  //     .pipe(
-  //       asyncApplyIf(
-  //         of(false),
-  //         map(() => 'true-operator'),
-  //         map(() => 'false-operator')
-  //       )
-  //     )
-  //     .subscribe((value) => {
-  //       expect(value).toBe('false-operator');
-  //     });
-  // });
 });

@@ -1,5 +1,5 @@
 import { Observable, of } from 'rxjs';
-import { map, mapTo } from 'rxjs/operators';
+import { mapTo } from 'rxjs/operators';
 
 import { applyIf } from './apply-if.operator';
 

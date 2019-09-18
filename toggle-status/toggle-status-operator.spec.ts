@@ -1,5 +1,5 @@
 import { of } from 'rxjs';
-import { delay, tap } from 'rxjs/operators';
+import { delay } from 'rxjs/operators';
 
 import { toggleStatus } from './toggle-status.operator';
 import { TogglableStatus } from '../shared/types/togglable-status';
@@ -12,10 +12,10 @@ describe('toggle-status operator', () => {
     const request = of('value').pipe(delay(200));
 
     request
-    .pipe(
-        toggleStatus(status),
-    )
-    .subscribe();
+      .pipe(
+          toggleStatus(status),
+      )
+      .subscribe();
 
     setTimeout(() => {
       expect(status.busy).toEqual(true);
