@@ -6,6 +6,9 @@ import { castArray } from '../shared/utils/cast-array';
 
 /**
  * Applies truthyOperators to the pipe if observable returns true. Otherwise applies falsyOperators
+ * @param condition observable that returns boolean value, depending on which, truthy or falsy operators will be applied to pipe.
+ * @param truthyOperators operator, or array of operators that will be applied to pipe if observable returns true
+ * @param falsyOperators operator, or array of operators that will be applied to pipe if observable returns false
  */
 export function applyIfAsync<T>(observable: Observable<boolean>, truthyOperators: Operators = [], falsyOperators: Operators = []): MonoTypeOperatorFunction<T> {
     return (source: Observable<T>): Observable<T> => observable.pipe(
