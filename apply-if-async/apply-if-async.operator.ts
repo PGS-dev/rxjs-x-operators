@@ -9,9 +9,17 @@ import { castArray } from '../shared/utils/cast-array';
  */
 export function applyIfAsync<T>(observable: Observable<boolean>, truthyOperators: Operators = [], falsyOperators: Operators = []): MonoTypeOperatorFunction<T> {
     return (source: Observable<T>): Observable<T> => observable.pipe(
-        // This @ts-ignoreis needed https://github.com/ReactiveX/rxjs/issues/3989#issuecomment-410585808
-        // https://github.com/ReactiveX/rxjs/blob/master/src/internal/util/pipe.ts
+        /**
+         * To avoid adding unnecessary code, the ts-ignore was added.
+         * Actually you CAN pass operators in array to .pipe() ;).
+         * See the source file linked below.
+         * This bug is already reported.
+         * 
+         * https://github.com/ReactiveX/rxjs/issues/3989#issuecomment-410585808
+         * https://github.com/ReactiveX/rxjs/blob/master/src/internal/util/pipe.ts
+         */
+
         //@ts-ignore
         concatMap((condition: boolean): Observable<T> => source.pipe(...castArray(condition ? truthyOperators : falsyOperators))
-    );
+    ));
 }

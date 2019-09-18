@@ -1,5 +1,5 @@
 import { of, Observable } from 'rxjs';
-import { map, mapTo } from 'rxjs/operators';
+import { mapTo } from 'rxjs/operators';
 
 import { applyIfAsync } from './apply-if-async.operator';
 
