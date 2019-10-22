@@ -25,5 +25,5 @@
     "test": "npx tsc --project tsconfig.spec.json && npx jasmine"
   },
   "typings": "./dist/index.d.ts",
-  "version": "1.3.0"
+  "version": "1.3.1"
 }
